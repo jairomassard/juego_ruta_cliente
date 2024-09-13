@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>Juego de Ruta</title>
+
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/icons/favicon.png" sizes="16x16" type="image/png">
+
+    <!-- Iconos de la aplicación -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+
+    <!-- Registrar el Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(reg => console.log('Service Worker registrado', reg))
+                    .catch(err => console.warn('Error al registrar el Service Worker', err));
+            });
+        }
+    </script>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ api_key }}&callback=initMap" async defer></script>
+
+
+    <!-- Vincula el archivo styles.css -->
+    <link rel="stylesheet" href="/static/styles.css?v=1.0">
+
+    <style>
+
+    </style>
+</head>
+
+
+<body>
+    <div id="mainContainer">
+        <!-- Encabezado con título y logos -->
+        <div id="header">
+            <div id="title">Centro de Servicios Colwagen Calle 78</div>
+            <div id="title">Juego de Ruta y Conocimientos</div>
+            <div id="logos">
+                <img src="/static/logo/audi2.png" alt="Audi">
+                <img src="/static/logo/volkswagen.png" alt="Volkswagen">
+                <img src="/static/logo/ducati.png" alt="Ducati">
+            </div>
+        </div>
+
+        <!-- Contenedor del mapa -->
+        <div id="mapContainer">
+            <div id="vehicleSelector">
+                <label for="vehicle">Selecciona tu vehículo:</label>
+                <select id="vehicle" name="vehicle">
+                    <option value="">Selecciona...</option>
+                    <option value="AUDI">AUDI</option>
+                    <option value="VOLKSWAGEN">VOLKSWAGEN</option>
+                    <option value="DUCATI">DUCATI</option>
+                </select>
+                <label for="startPoint">Selecciona el punto de inicio:</label>
+                <select id="startPoint" name="startPoint">
+                    <option value="0">P1</option>
+                    <option value="1">P2</option>
+                    <option value="2">P3</option>
+                    <option value="3">P4</option>
+                </select>
+                <button onclick="startGame()">Iniciar</button>
+
+            </div>
+
+            <!-- Contenedor para el botón Volver a Empezar -->
+            <div id="restartButtonContainer">
+                <button id="restartButton" onclick="restartGame()">Volver a Empezar</button>
+            </div>
+
+            <div id="timer">Tiempo: 0s</div>
+
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <!-- Ventana emergente para las preguntas -->
+    <div id="questionModal">
+        <h3 id="questionText"></h3>
+        <div id="optionsContainer"></div>
+        <button onclick="checkAnswer()">Responder</button>
+    </div>
+
+    <!-- ubicacion de los controles de pantalla -->
+    <div id="controlsContainer">
+        <div class="row">
+            <button onclick="moveVehicle('up')">⬆️</button>
+        </div>
+        <div class="row">
+            <button onclick="moveVehicle('left')">⬅️</button>
+            <button onclick="moveVehicle('down')">⬇️</button>
+            <button onclick="moveVehicle('right')">➡️</button>
+        </div>
+    </div>
+
+
+    <script>
+        let map;
+        let marker;
+        let vehicleLogo;
+        let vehicleLogos = {
+            "AUDI": 'audi.png',
+            "VOLKSWAGEN": 'volkswagen.png',
+            "DUCATI": 'ducati.png'
+        };
+
+        let storedRoutes = {};
+        let currentStepIndex = 0;
+        let currentRouteSteps = [];
+        let playedPoints = new Set();
+        let routePolyline = null;
+        let routeColors = ["#FF0000", "#0000FF", "#00FF00", "#FFA500"];
+        let gameStartTime = null;
+        let gameInterval = null;
+        let isMoving = false;
+        let questions = [];
+        let currentQuestion = null;
+        let correctAnswer = null;
+        let questionAnsweredCorrectly = true;  // Inicialmente es true para permitir movimiento
+
+        const startPoints = [
+            { lat: 4.675012904403253, lng: -74.06580527473798 },
+            { lat: 4.672103505674668, lng: -74.06313815035868 },
+            { lat: 4.669537136414592, lng: -74.07157101457376 },
+            { lat: 4.675257988352596, lng: -74.05954399067413 }
+        ];
+
+        let workshopLocation = { lat: 4.670607316343895, lng: -74.06642754716098 };
+
+        const questionMarkers = [];  // Almacenará los marcadores de preguntas
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 16  // Zoom inicial
+            });
+
+            const bounds = new google.maps.LatLngBounds();
+
+            const workshopMarker = new google.maps.Marker({
+                position: workshopLocation,
+                map: map,
+                icon: {
+                    url: '/static/logo/taller.png',
+                    scaledSize: new google.maps.Size(50, 50)
+                },
+                title: 'Taller de Servicios'
+            });
+
+            bounds.extend(workshopLocation);
+
+            startPoints.forEach((point, index) => {
+                new google.maps.Marker({
+                    position: point,
+                    map: map,
+                    label: {
+                        text: `P${index + 1}`,
+                        color: "black",
+                        fontWeight: "bold"
+                    },
+                    title: `P${index + 1}`
+                });
+                bounds.extend(point);
+            });
+
+            map.fitBounds(bounds);
+
+            // Ajuste manual del centrado del mapa para lograr la vista deseada
+            let adjustedCenter = {
+                lat: workshopLocation.lat + 0.002,  // Ajuste hacia abajo
+                lng: workshopLocation.lng + 0.003   // Ajuste hacia la izquierda
+            };
+            map.panTo(adjustedCenter);  // Ajusta el centro del mapa manualmente
+
+            // Ajustar el nivel de zoom basado en la resolución de la pantalla
+            let screenHeight = window.innerHeight;  // Obtiene la altura de la ventana en píxeles
+
+            let zoomLevel;
+            if (screenHeight <= 768) {
+                zoomLevel = 15;  // Zoom para pantallas de 720p o 768p
+            } else {
+                zoomLevel = 16;  // Zoom para pantallas de 1080p o superiores
+            }
+
+            // Ahora ajustamos manualmente el nivel de zoom después de fitBounds
+            let listener = google.maps.event.addListener(map, "idle", function () {
+                if (map.getZoom() > 14) {
+                    map.setZoom(16);  // Ajusta a un zoom basado en la resolución
+                }
+                google.maps.event.removeListener(listener);
+            });
+
+            fetch('/routes/routes.json')
+                .then(response => response.json())
+                .then(data => {
+                    storedRoutes = data;
+                    console.log("Rutas cargadas:", storedRoutes);
+                })
+                .catch(error => {
+                    console.error("Error al cargar las rutas:", error);
+                });
+
+            loadQuestions(); // Cargar preguntas
+            enableTouchNavigation();  // Llamar para habilitar navegación por deslizamiento
+        }
+
+
+        function initMarker(logo, startPoint) {
+            marker = new google.maps.Marker({
+                position: startPoint,
+                map: map,
+                icon: {
+                    url: `/static/logo/${logo}`,
+                    scaledSize: new google.maps.Size(40, 40)
+                },
+                title: 'Vehículo'
+            });
+        }
+
+        function displayRoute(startLocation, endLocation, steps, color) {
+            currentRouteSteps = steps;
+            currentStepIndex = 0;
+
+            if (routePolyline) {
+                routePolyline.setMap(null);
+            }
+
+            let routePath = steps.map(step => {
+                return new google.maps.LatLng(step.end_location.lat, step.end_location.lng);
+            });
+
+            routePolyline = new google.maps.Polyline({
+                path: routePath,
+                strokeColor: color,
+                strokeOpacity: 1.0,
+                strokeWeight: 4,
+                map: map
+            });
+
+            // Agregar el icono de preguntas en un punto intermedio de la ruta
+            const midpointIndex = Math.floor(steps.length / 2);
+            const midpointLocation = steps[midpointIndex].end_location;
+
+            // Eliminar cualquier marcador de preguntas anterior
+            questionMarkers.forEach(marker => marker.setMap(null));
+            questionMarkers.length = 0;
+
+            // Crear el nuevo marcador de preguntas
+            const questionMarker = new google.maps.Marker({
+                position: midpointLocation,
+                map: map,
+                icon: {
+                    url: '/static/logo/preguntas.png',
+                    scaledSize: new google.maps.Size(40, 40)
+                },
+                title: 'Pregunta'
+            });
+
+            questionMarkers.push(questionMarker);
+
+            enableKeyNavigation();
+        }
+
+        function enableKeyNavigation() {
+            document.addEventListener('keydown', function (event) {
+                if (!isMoving && questionAnsweredCorrectly) {  // Solo permite mover si la pregunta fue respondida correctamente
+                    let nextStep = currentRouteSteps[currentStepIndex];
+                    if (nextStep) {
+                        isMoving = true;
+                        moveMarker(nextStep.end_location, () => {
+                            currentStepIndex++;
+                            isMoving = false;
+
+                            // Verificar si estamos en un punto de pregunta
+                            if (isAtQuestionPoint(nextStep.end_location.lat, nextStep.end_location.lng)) {
+                                questionAnsweredCorrectly = false;  // Bloquear movimiento hasta que responda
+                                showQuestion();
+                            }
+
+                            // Verificar si hemos llegado al final de la ruta y si se ha respondido correctamente la pregunta
+                            if (currentStepIndex >= currentRouteSteps.length && questionAnsweredCorrectly) {
+                                handleArrival();
+                            }
+                        });
+                    }
+                } else if (!questionAnsweredCorrectly && isAtQuestionPoint(marker.getPosition().lat(), marker.getPosition().lng())) {
+                    // Solo mostrar el mensaje si está en el punto de la pregunta
+                    alert('Debes contestar la pregunta correctamente antes de continuar.');
+                }
+            });
+        }
+
+        function enableTouchNavigation() {
+            let touchStartX = 0;
+            let touchStartY = 0;
+
+            document.addEventListener('touchstart', function (event) {
+                touchStartX = event.touches[0].clientX;
+                touchStartY = event.touches[0].clientY;
+            });
+
+            document.addEventListener('touchmove', function (event) {
+                let touchEndX = event.touches[0].clientX;
+                let touchEndY = event.touches[0].clientY;
+
+                let deltaX = touchEndX - touchStartX;
+                let deltaY = touchEndY - touchStartY;
+
+                if (!isMoving && questionAnsweredCorrectly) {
+                    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+                        if (deltaX > 0) {
+                            moveVehicle('right');
+                        } else {
+                            moveVehicle('left');
+                        }
+                    } else {
+                        if (deltaY > 0) {
+                            moveVehicle('down');
+                        } else {
+                            moveVehicle('up');
+                        }
+                    }
+                }
+            });
+        }
+
+
+        function moveMarker(destination, callback) {
+            let startPosition = marker.getPosition();
+            let distance = google.maps.geometry.spherical.computeDistanceBetween(
+                startPosition,
+                new google.maps.LatLng(destination.lat, destination.lng)
+            );
+
+            let totalSteps = Math.round(distance / 2);
+            let deltaLat = (destination.lat - startPosition.lat()) / totalSteps;
+            let deltaLng = (destination.lng - startPosition.lng()) / totalSteps;
+            let step = 0;
+
+            let interval = setInterval(() => {
+                if (step < totalSteps) {
+                    let nextLat = startPosition.lat() + deltaLat * step;
+                    let nextLng = startPosition.lng() + deltaLng * step;
+                    marker.setPosition(new google.maps.LatLng(nextLat, nextLng));
+                    step++;
+                } else {
+                    clearInterval(interval);
+                    callback();
+                }
+            }, 30);
+        }
+
+        function handleArrival() {
+            let startPointIndex = document.getElementById('startPoint').value;
+            playedPoints.add(parseInt(startPointIndex));  // Marcar el punto jugado
+
+            document.getElementById('vehicleSelector').style.display = 'block';
+            marker.setMap(null);
+
+            document.getElementById('startPoint').options[startPointIndex].disabled = true;
+
+            if (playedPoints.size === 4) {  // Si completó las 4 rutas
+                stopTimer();
+                alert('¡Has completado el desplazamiento desde todos los puntos!. Finalizaste con Éxito!!');
+                document.getElementById('vehicleSelector').style.display = 'none';
+            } else {
+                alert('Has llegado al taller. Prueba desde otro punto.');
+            }
+        }
+
+        function startGame() {
+            let vehicle = document.getElementById('vehicle').value;
+            let startPointIndex = document.getElementById('startPoint').value;
+
+            if (playedPoints.size === 0) {
+                startTimer();
+            }
+
+            if (vehicleLogos[vehicle] && !playedPoints.has(parseInt(startPointIndex))) {
+                vehicleLogo = vehicleLogos[vehicle];
+
+                let route = storedRoutes[`route_${parseInt(startPointIndex) + 1}`];
+                let startPoint = route[0].legs[0].start_location;
+                let endPoint = route[0].legs[0].end_location;
+                let steps = route[0].legs[0].steps;
+                let routeColor = routeColors[parseInt(startPointIndex)];
+
+                initMarker(vehicleLogo, startPoint);
+                displayRoute(startPoint, endPoint, steps, routeColor);
+                document.getElementById('vehicleSelector').style.display = 'none';
+            } else {
+                alert('Por favor selecciona un vehículo válido o un punto no jugado.');
+            }
+        }
+
+        function startTimer() {
+            gameStartTime = new Date();
+            gameInterval = setInterval(() => {
+                let timeElapsed = Math.floor((new Date() - gameStartTime) / 1000);
+                document.getElementById('timer').innerText = `Tiempo: ${timeElapsed}s`;
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(gameInterval);
+        }
+
+        let usedQuestions = JSON.parse(localStorage.getItem('usedQuestions')) || []; // Preguntas ya usadas en sesiones pasadas
+
+        function loadQuestions() {
+            fetch('/preguntas/preguntas.json')
+                .then(response => response.json())
+                .then(data => {
+                    questions = data.questions;
+                    console.log("Preguntas cargadas:", questions);
+                })
+                .catch(error => console.error("Error al cargar las preguntas:", error));
+        }
+
+        function showQuestion() {
+            // Si todas las preguntas han sido utilizadas, reiniciar el conjunto de preguntas usadas
+            if (usedQuestions.length === questions.length) {
+                usedQuestions = [];
+                localStorage.removeItem('usedQuestions');
+            }
+
+            // Filtrar preguntas que ya han sido usadas
+            let availableQuestions = questions.filter((_, index) => !usedQuestions.includes(index));
+
+            // Escoger una pregunta aleatoria de las disponibles
+            let randomIndex = Math.floor(Math.random() * availableQuestions.length);
+            currentQuestion = availableQuestions[randomIndex];
+
+            // Guardar el índice de la pregunta utilizada
+            let originalIndex = questions.indexOf(currentQuestion);
+            usedQuestions.push(originalIndex);
+            localStorage.setItem('usedQuestions', JSON.stringify(usedQuestions));
+
+            correctAnswer = currentQuestion.correct;
+
+            document.getElementById('questionText').innerText = currentQuestion.question;
+
+            const optionsContainer = document.getElementById('optionsContainer');
+            optionsContainer.innerHTML = '';
+
+            currentQuestion.options.forEach((option, index) => {
+                let optionElement = document.createElement('div');
+                optionElement.innerHTML = `
+            <input type="radio" name="answer" value="${index}" /> ${option}
+        `;
+                optionsContainer.appendChild(optionElement);
+            });
+
+            document.getElementById('questionModal').style.display = 'block';
+        }
+
+        function checkAnswer() {
+            const selectedOption = document.querySelector('input[name="answer"]:checked');
+
+            if (selectedOption) {
+                const selectedValue = parseInt(selectedOption.value);
+
+                if (selectedValue === correctAnswer) {
+                    alert('¡Respuesta correcta!. Continua tu recorrido');
+                    questionAnsweredCorrectly = true;  // Permitir movimiento
+                    document.getElementById('questionModal').style.display = 'none';
+                } else {
+                    alert('Respuesta incorrecta. Inténtalo nuevamente.');
+                }
+            } else {
+                alert('Por favor selecciona una opción.');
+            }
+        }
+
+        function moveVehicle(direction) {
+            if (!isMoving && questionAnsweredCorrectly) {  // Solo permite mover si la pregunta fue respondida correctamente
+                let nextStep = currentRouteSteps[currentStepIndex];
+
+                if (nextStep) {
+                    isMoving = true;
+                    let destination;
+
+                    // En lugar de mover libremente, movemos el marcador al siguiente paso de la ruta
+                    switch (direction) {
+                        case 'up':
+                        case 'down':
+                        case 'left':
+                        case 'right':
+                            // Avanza al siguiente paso en la ruta
+                            destination = nextStep.end_location;
+                            break;
+                    }
+
+                    moveMarker(destination, () => {
+                        currentStepIndex++;
+                        isMoving = false;
+
+                        if (isAtQuestionPoint(marker.getPosition().lat(), marker.getPosition().lng())) {
+                            questionAnsweredCorrectly = false;
+                            showQuestion();
+                        }
+
+                        if (currentStepIndex >= currentRouteSteps.length && questionAnsweredCorrectly) {
+                            handleArrival();
+                        }
+                    });
+                }
+            } else if (!questionAnsweredCorrectly && isAtQuestionPoint(marker.getPosition().lat(), marker.getPosition().lng())) {
+                alert('Debes contestar la pregunta correctamente antes de continuar.');
+            }
+        }
+
+        function restartGame() {
+            // localStorage.removeItem('usedQuestions'); // Reiniciar las preguntas usadas
+            location.reload();  // Recargar la página
+        }
+
+
+        function isAtQuestionPoint(lat, lng) {
+            if (questionMarkers.length > 0) {
+                const questionMarker = questionMarkers[0];
+                const distance = google.maps.geometry.spherical.computeDistanceBetween(
+                    new google.maps.LatLng(lat, lng),
+                    questionMarker.getPosition()
+                );
+
+                console.log("Distancia al punto de pregunta:", distance);
+
+                // Verificar si estamos a menos de 50 metros del punto
+                return distance < 50;
+            }
+            return false;
+        }
+
+        window.onload = function () {
+            initMap();
+        };
+    </script>
+</body>
+
+</html>

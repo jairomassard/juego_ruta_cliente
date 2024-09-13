@@ -1,0 +1,337 @@
+{
+    "questions": [
+        {
+            "question": "¿En qué año se fundó Audi?",
+            "options": [
+                "1932",
+                "1909",
+                "1925"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Cuál es el lema oficial de Audi?",
+            "options": [
+                "A la vanguardia de la técnica",
+                "El poder de los sueños",
+                "Pasión por conducir"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Qué significan los cuatro aros del logotipo de Audi?",
+            "options": [
+                "Unión de cuatro fábricas",
+                "Cuatro continentes",
+                "Cuatro tipos de vehículos"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Cuál es el sistema de tracción total de Audi disponible en varios modelos en Colombia?",
+            "options": [
+                "4Matic",
+                "Quattro",
+                "xDrive"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Cuál de estos modelos pertenece a Audi y se comercializa en Colombia?",
+            "options": [
+                "Q5",
+                "X3",
+                "Cayenne"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Cuál es el auto deportivo de Audi, disponible en Colombia, conocido por su alto rendimiento?",
+            "options": [
+                "R8",
+                "RS5",
+                "TT"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿En qué país tiene Audi su sede central?",
+            "options": [
+                "Italia",
+                "Alemania",
+                "Francia"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Qué significa 'TFSI' en los motores de Audi disponibles en Colombia?",
+            "options": [
+                "Turbo Fuel Stratified Injection",
+                "Turbo Fast Speed Injection",
+                "Twin Fuel Sequential Injection"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Cuál es la submarca de Audi enfocada en vehículos eléctricos disponible en Colombia?",
+            "options": [
+                "e-tron",
+                "i-series",
+                "PowerDrive"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Cómo se llama el SUV de mayor tamaño de Audi comercializado en Colombia?",
+            "options": [
+                "Q3",
+                "Q8",
+                "Q5"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿En qué competencia de automovilismo ha participado Audi, conocida en Colombia, con el Audi R18?",
+            "options": [
+                "Fórmula 1",
+                "Las 24 Horas de Le Mans",
+                "Indianápolis 500"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Cuál es la categoría de autos más lujosa de Audi en el mercado colombiano?",
+            "options": [
+                "A3",
+                "A8",
+                "Q7"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Qué modelo de Audi está enfocado en el público joven colombiano, gracias a su diseño compacto y versátil?",
+            "options": [
+                "Audi A1",
+                "Audi Q3",
+                "Audi A6"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Qué material utiliza Audi para reducir el peso en algunos modelos comercializados en Colombia?",
+            "options": [
+                "Fibra de carbono",
+                "Aluminio",
+                "Titanio"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Cuál es el sistema de control de conducción dinámica de Audi disponible en varios modelos en Colombia?",
+            "options": [
+                "Audi drive select",
+                "Dynamic Drive",
+                "Select Control"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿En qué año lanzó Volkswagen el icónico modelo Beetle (Escarabajo), muy popular en Colombia?",
+            "options": [
+                "1938",
+                "1945",
+                "1952"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Cómo se llama el SUV más grande de Volkswagen disponible en Colombia?",
+            "options": [
+                "Tiguan",
+                "Touareg",
+                "Atlas"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Qué significa la palabra 'Volkswagen'?",
+            "options": [
+                "Coche popular",
+                "Coche de lujo",
+                "Coche de ciudad"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿En qué país tiene su sede Volkswagen?",
+            "options": [
+                "Estados Unidos",
+                "Alemania",
+                "Francia"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Cuál es el sistema de tracción en las cuatro ruedas de Volkswagen llamado y disponible en Colombia?",
+            "options": [
+                "Quattro",
+                "xDrive",
+                "4MOTION"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "¿Cuál es el sedán más vendido de Volkswagen en Colombia?",
+            "options": [
+                "Passat",
+                "Jetta",
+                "Arteon"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Qué motor revolucionario lanzó Volkswagen, disponible en modelos colombianos, en la década de los 70?",
+            "options": [
+                "Motor TFSI",
+                "Motor VR6",
+                "Motor bóxer"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿En qué año fue relanzado el Volkswagen Beetle con un diseño moderno?",
+            "options": [
+                "1998",
+                "2001",
+                "2005"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Qué modelo de Volkswagen es conocido por su eficiencia y tamaño compacto y es popular en Colombia?",
+            "options": [
+                "Polo",
+                "Golf",
+                "Passat"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Qué vehículo de Volkswagen es comúnmente utilizado para aventuras y camping en Colombia?",
+            "options": [
+                "Transporter",
+                "Amarok",
+                "Caravelle"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Cuál es la camioneta pickup de Volkswagen que ha tenido gran acogida en Colombia?",
+            "options": [
+                "Amarok",
+                "Tiguan",
+                "Touareg"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Qué modelo de Volkswagen es un hatchback deportivo y muy apreciado en Colombia?",
+            "options": [
+                "Passat",
+                "Golf GTI",
+                "Polo"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Qué modelo eléctrico lanzó Volkswagen en Colombia dentro de su nueva gama ID?",
+            "options": [
+                "ID.3",
+                "e-Golf",
+                "Passat GTE"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Cuál es el auto más vendido de la historia de Volkswagen, también popular en Colombia?",
+            "options": [
+                "Golf",
+                "Polo",
+                "Beetle"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "¿Qué sistema utiliza Volkswagen para reducir emisiones en motores diésel disponibles en Colombia?",
+            "options": [
+                "AdBlue",
+                "Start-Stop",
+                "EGR"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Cuál es el modelo Volkswagen SUV compacto más popular en Colombia?",
+            "options": [
+                "Tiguan",
+                "Touareg",
+                "Atlas"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿En qué año Volkswagen adquirió a Ducati, también disponible en Colombia?",
+            "options": [
+                "2012",
+                "2009",
+                "2015"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Qué tipo de vehículo fabrica Ducati, popular entre los entusiastas en Colombia?",
+            "options": [
+                "Coches deportivos",
+                "Motocicletas",
+                "Camiones"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Cuál es el color tradicional de Ducati en competencias, visto en sus modelos en Colombia?",
+            "options": [
+                "Rojo",
+                "Azul",
+                "Negro"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Cuál es uno de los modelos más icónicos de Ducati disponible en Colombia?",
+            "options": [
+                "Monster",
+                "Multistrada",
+                "Diavel"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Qué significa 'SuperSport' en la gama de motocicletas Ducati en Colombia?",
+            "options": [
+                "Alta velocidad",
+                "Uso en ciudad",
+                "Motocross"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Qué modelo de Ducati es ideal para el uso urbano en Colombia?",
+            "options": [
+                "Scrambler",
+                "Panigale",
+                "Superleggera"
+            ],
+            "correct": 0
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "questions": [
+        {
+            "question": "¿Cómo se llama la princesa de 'La Bella y la Bestia'?",
+            "options": [
+                "Ariel",
+                "Bella",
+                "Jazmín"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Quién es el protagonista en Toy Story?",
+            "options": [
+                "Buzz Lightyear",
+                "Woody",
+                "Rex"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Cuánto es 5 + 3?",
+            "options": [
+                "7",
+                "8",
+                "9"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Cómo se llama el auto en Cars?",
+            "options": [
+                "Rayo McQueen",
+                "Sally",
+                "Mate"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Qué animal es Simba en El Rey León?",
+            "options": [
+                "Un elefante",
+                "Un león",
+                "Un tigre"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Qué objeto mágico tiene la Cenicienta?",
+            "options": [
+                "Zapatos de cristal",
+                "Una alfombra mágica",
+                "Una varita mágica"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Quién es la hermana mayor de Elsa en Frozen?",
+            "options": [
+                "Rapunzel",
+                "Anna",
+                "Moana"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "¿Cómo se llama la ciudad donde vive el Rayo McQueen?",
+            "options": [
+                "Radiador Springs",
+                "Ciudad del Motor",
+                "Radiator Flat"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "¿Cómo se llama la princesa de La Sirenita?",
+            "options": [
+                "Bella",
+                "Aurora",
+                "Ariel"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "¿Cuánto es 8 - 5?",
+            "options": [
+                "4",
+                "2",
+                "3"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "¿Cuánto es 5 x 3?",
+            "options": [
+                "15",
+                "10",
+                "20"
+            ],
+            "correct": 0
+        }
+    ]
+}

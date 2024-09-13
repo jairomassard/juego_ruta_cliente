@@ -1,0 +1,21 @@
+/mi_proyecto_juego/
+│
+├── /static/
+│   └── /logo/
+│       ├── audi.png
+│       ├── volkswagen.png
+│       ├── ducati.png
+│       ├── preguntas.png
+│       └── taller.png
+│
+├── /templates/
+│   └── index.html  # archivo HTML del juego
+│
+├── /preguntas/
+│   └── preguntas.json  # Archivo con preguntas aleatorias para hacer
+│
+├── /routes/        # Carpeta para almacenar las rutas
+│   └── routes.json  # Archivo generado por generate_routes.py
+│
+└── /scripts/       # Carpeta para almacenar scripts auxiliares
+    └── generate_routes.py  # Script Python para generar las rutas

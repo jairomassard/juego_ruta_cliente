@@ -1,0 +1,905 @@
+{
+    "route_1": [
+        {
+            "bounds": {
+                "northeast": {
+                    "lat": 4.6770721,
+                    "lng": -74.06523299999999
+                },
+                "southwest": {
+                    "lat": 4.6706024,
+                    "lng": -74.06936859999999
+                }
+            },
+            "copyrights": "Map data \u00a92024",
+            "legs": [
+                {
+                    "distance": {
+                        "text": "1.8 km",
+                        "value": 1816
+                    },
+                    "duration": {
+                        "text": "5 mins",
+                        "value": 300
+                    },
+                    "end_address": "Cra. 28a #78 - 50, polo, Bogot\u00e1, Colombia",
+                    "end_location": {
+                        "lat": 4.6706024,
+                        "lng": -74.0664218
+                    },
+                    "start_address": "Castellana, Barrios Unidos, Bogot\u00e1, Colombia",
+                    "start_location": {
+                        "lat": 4.6750456,
+                        "lng": -74.0658242
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "39 m",
+                                "value": 39
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 4
+                            },
+                            "end_location": {
+                                "lat": 4.6748625,
+                                "lng": -74.06612319999999
+                            },
+                            "html_instructions": "Head <b>southwest</b> on <b>Av. Cdad. de Quito</b>/<wbr/><b>Ave Cra 30</b>/<wbr/><b>Av NQS</b> toward <b>Cl. 85a</b>",
+                            "polyline": {
+                                "points": "abp[j~`cMHNZj@"
+                            },
+                            "start_location": {
+                                "lat": 4.6750456,
+                                "lng": -74.0658242
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "56 m",
+                                "value": 56
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 16
+                            },
+                            "end_location": {
+                                "lat": 4.6753009,
+                                "lng": -74.0663758
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Cl. 85a</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "{`p[f`acMi@Vm@Z"
+                            },
+                            "start_location": {
+                                "lat": 4.6748625,
+                                "lng": -74.06612319999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 km",
+                                "value": 150
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 37
+                            },
+                            "end_location": {
+                                "lat": 4.6760119,
+                                "lng": -74.06523299999999
+                            },
+                            "html_instructions": "Turn <b>right</b> at the 1st cross street onto <b>Cra. 49a</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "scp[zaacMMWQ][u@IMo@oACGCECCKI"
+                            },
+                            "start_location": {
+                                "lat": 4.6753009,
+                                "lng": -74.0663758
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 km",
+                                "value": 194
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 64
+                            },
+                            "end_location": {
+                                "lat": 4.6769569,
+                                "lng": -74.06669939999999
+                            },
+                            "html_instructions": "Turn <b>left</b> onto <b>Cl. 86a</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "ahp[tz`cMQLKNGHm@jA[l@Yj@c@z@OZ"
+                            },
+                            "start_location": {
+                                "lat": 4.6760119,
+                                "lng": -74.06523299999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.3 km",
+                                "value": 272
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 45
+                            },
+                            "end_location": {
+                                "lat": 4.6751988,
+                                "lng": -74.06808
+                            },
+                            "html_instructions": "Turn <b>left</b> at the 3rd cross street onto <b>Cra. 50</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "_np[zcacMEHIREJv@b@x@`@j@Zl@ZdCrAPJLFBB"
+                            },
+                            "start_location": {
+                                "lat": 4.6769569,
+                                "lng": -74.06669939999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 km",
+                                "value": 225
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 24
+                            },
+                            "end_location": {
+                                "lat": 4.6735758,
+                                "lng": -74.0684816
+                            },
+                            "html_instructions": "Slight <b>left</b> onto the ramp to <b>Av NQS al Sur</b>/<wbr/><b>Av El Dorado</b>",
+                            "maneuver": "ramp-left",
+                            "polyline": {
+                                "points": "_cp[nlacMRBJ@RALABADADAFCHGr@i@DABA@?@?H?D@F@B@FFFFNLLLrAzA"
+                            },
+                            "start_location": {
+                                "lat": 4.6751988,
+                                "lng": -74.06808
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 km",
+                                "value": 104
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 12
+                            },
+                            "end_location": {
+                                "lat": 4.673994599999999,
+                                "lng": -74.06915409999999
+                            },
+                            "html_instructions": "Slight <b>right</b>",
+                            "maneuver": "turn-slight-right",
+                            "polyline": {
+                                "points": "{xo[~nacMFV@B@D?D@B?DAF?DABAB?BCBABC@ABA?ABGBMFOFKFWJ"
+                            },
+                            "start_location": {
+                                "lat": 4.6735758,
+                                "lng": -74.0684816
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.6 km",
+                                "value": 639
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 70
+                            },
+                            "end_location": {
+                                "lat": 4.671520699999999,
+                                "lng": -74.0656018
+                            },
+                            "html_instructions": "Take the ramp onto <b>Cl. 80</b>",
+                            "polyline": {
+                                "points": "m{o[dsacMk@`@EBEBG@G?EAMAGAEAGCGEGEEGAEACAGAEAG?I?IDq@LQr@aAp@{@RQPQLMLMFCDEFGFEBCBCn@i@l@g@DEDE^]^_@pAsAp@m@HILKh@a@l@e@"
+                            },
+                            "start_location": {
+                                "lat": 4.673994599999999,
+                                "lng": -74.06915409999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 km",
+                                "value": 137
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 28
+                            },
+                            "end_location": {
+                                "lat": 4.6706024,
+                                "lng": -74.0664218
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Cra. 28a</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "_lo[~|`cMz@v@|@v@|@r@"
+                            },
+                            "start_location": {
+                                "lat": 4.671520699999999,
+                                "lng": -74.0656018
+                            },
+                            "travel_mode": "DRIVING"
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                }
+            ],
+            "overview_polyline": {
+                "points": "abp[j~`cMd@z@wAr@eAyB{@aBKIQLSXgC`Fe@dAjE|BhDjB^D`@CVI|@q@HCR@JBNN\\ZrAzAFVBH@HCVGNIHq@ZcAl@KFO@SC]MQWE_@D{@`AsAdAmA^_@b@_@~@w@xAqAlDkDv@m@l@e@z@v@zBjB"
+            },
+            "summary": "Cl. 80",
+            "warnings": [],
+            "waypoint_order": []
+        }
+    ],
+    "route_2": [
+        {
+            "bounds": {
+                "northeast": {
+                    "lat": 4.672101,
+                    "lng": -74.0631219
+                },
+                "southwest": {
+                    "lat": 4.6673684,
+                    "lng": -74.0669229
+                }
+            },
+            "copyrights": "Map data \u00a92024",
+            "legs": [
+                {
+                    "distance": {
+                        "text": "1.2 km",
+                        "value": 1240
+                    },
+                    "duration": {
+                        "text": "5 mins",
+                        "value": 284
+                    },
+                    "end_address": "Cra. 28a #78 - 50, polo, Bogot\u00e1, Colombia",
+                    "end_location": {
+                        "lat": 4.6706024,
+                        "lng": -74.0664218
+                    },
+                    "start_address": "Cra. 24 #13, Bogot\u00e1, Colombia",
+                    "start_location": {
+                        "lat": 4.672101,
+                        "lng": -74.0631219
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "0.1 km",
+                                "value": 112
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 18
+                            },
+                            "end_location": {
+                                "lat": 4.671103,
+                                "lng": -74.0632469
+                            },
+                            "html_instructions": "Head <b>south</b> on <b>Ak. 24</b>/<wbr/><b>Cra. 24</b> toward <b>Cl. 83 Bis</b>",
+                            "polyline": {
+                                "points": "soo[nm`cMN@dAHRBn@Bl@D"
+                            },
+                            "start_location": {
+                                "lat": 4.672101,
+                                "lng": -74.0631219
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.4 km",
+                                "value": 446
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 85
+                            },
+                            "end_location": {
+                                "lat": 4.6673684,
+                                "lng": -74.0644066
+                            },
+                            "html_instructions": "Keep <b>left</b> to continue on <b>Cra. 24</b>",
+                            "maneuver": "keep-left",
+                            "polyline": {
+                                "points": "kio[hn`cMLAnCJx@Dr@Dt@DL@d@BJ?J@V@TJl@TTHTJ`Ah@pC~A"
+                            },
+                            "start_location": {
+                                "lat": 4.671103,
+                                "lng": -74.0632469
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.3 km",
+                                "value": 333
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 73
+                            },
+                            "end_location": {
+                                "lat": 4.6689983,
+                                "lng": -74.0669229
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Cl. 77</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "arn[pu`cMGHU^y@`BOVq@jAm@dAQ\\_@r@a@p@i@z@"
+                            },
+                            "start_location": {
+                                "lat": 4.6673684,
+                                "lng": -74.0644066
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 km",
+                                "value": 227
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 62
+                            },
+                            "end_location": {
+                                "lat": 4.6705353,
+                                "lng": -74.0655792
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Cra. 28</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "g|n[feacM}@w@_Aw@yAmA{AmA"
+                            },
+                            "start_location": {
+                                "lat": 4.6689983,
+                                "lng": -74.0669229
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "77 m",
+                                "value": 77
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 25
+                            },
+                            "end_location": {
+                                "lat": 4.670910399999999,
+                                "lng": -74.06615819999999
+                            },
+                            "html_instructions": "Turn <b>left</b> at the 2nd cross street onto <b>Cl. 79</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "{eo[z|`cMc@x@e@x@"
+                            },
+                            "start_location": {
+                                "lat": 4.6705353,
+                                "lng": -74.0655792
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "45 m",
+                                "value": 45
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 21
+                            },
+                            "end_location": {
+                                "lat": 4.6706024,
+                                "lng": -74.0664218
+                            },
+                            "html_instructions": "Turn <b>left</b> onto <b>Cra. 28a</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "eho[n`acM|@r@"
+                            },
+                            "start_location": {
+                                "lat": 4.670910399999999,
+                                "lng": -74.06615819999999
+                            },
+                            "travel_mode": "DRIVING"
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                }
+            ],
+            "overview_polyline": {
+                "points": "soo[nm`cMxCRz@BhEP|CPV@V@TJbA^vAt@pC~AGHoA`CaCfEaAdBi@z@}@w@yCeC{AmAc@x@e@x@|@r@"
+            },
+            "summary": "Ak. 24 and Cl. 77",
+            "warnings": [],
+            "waypoint_order": []
+        }
+    ],
+    "route_3": [
+        {
+            "bounds": {
+                "northeast": {
+                    "lat": 4.671969199999999,
+                    "lng": -74.0656018
+                },
+                "southwest": {
+                    "lat": 4.669533899999999,
+                    "lng": -74.0715673
+                }
+            },
+            "copyrights": "Map data \u00a92024",
+            "legs": [
+                {
+                    "distance": {
+                        "text": "1.1 km",
+                        "value": 1067
+                    },
+                    "duration": {
+                        "text": "3 mins",
+                        "value": 173
+                    },
+                    "end_address": "Cra. 28a #78 - 50, polo, Bogot\u00e1, Colombia",
+                    "end_location": {
+                        "lat": 4.6706024,
+                        "lng": -74.0664218
+                    },
+                    "start_address": "Calle 75 - Zona M, Barrios Unidos, Bogot\u00e1, Colombia",
+                    "start_location": {
+                        "lat": 4.669533899999999,
+                        "lng": -74.0715673
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "0.3 km",
+                                "value": 328
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 32
+                            },
+                            "end_location": {
+                                "lat": 4.6717867,
+                                "lng": -74.06966
+                            },
+                            "html_instructions": "Head <b>northeast</b> on <b>Av. Cdad. de Quito</b>/<wbr/><b>Ave Cra 30</b>/<wbr/><b>Av NQS</b> toward <b>Cl. 75</b>",
+                            "polyline": {
+                                "points": "q_o[hbbcM_@[qAeAsAeA[UKISMQM][QMUS]Um@g@]]"
+                            },
+                            "start_location": {
+                                "lat": 4.669533899999999,
+                                "lng": -74.0715673
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.3 km",
+                                "value": 285
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 55
+                            },
+                            "end_location": {
+                                "lat": 4.6703887,
+                                "lng": -74.06751059999999
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Cl. 78</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "umo[jvacMZk@Zm@|@wADIFKb@w@d@y@hAsB"
+                            },
+                            "start_location": {
+                                "lat": 4.6717867,
+                                "lng": -74.06966
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 km",
+                                "value": 230
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 41
+                            },
+                            "end_location": {
+                                "lat": 4.671969199999999,
+                                "lng": -74.0661685
+                            },
+                            "html_instructions": "Turn <b>left</b> onto <b>Cra. 28b</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "}do[|hacMMIeAy@A?CCyAgAEGIKOMQQuAgA"
+                            },
+                            "start_location": {
+                                "lat": 4.6703887,
+                                "lng": -74.06751059999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "24 m",
+                                "value": 24
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 5
+                            },
+                            "end_location": {
+                                "lat": 4.6719566,
+                                "lng": -74.0659611
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Cl. 79b</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "yno[p`acMBK@G@GAGACAA"
+                            },
+                            "start_location": {
+                                "lat": 4.671969199999999,
+                                "lng": -74.0661685
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "63 m",
+                                "value": 63
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 12
+                            },
+                            "end_location": {
+                                "lat": 4.671520699999999,
+                                "lng": -74.0656018
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Cl. 80</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "wno[f_acMh@a@l@e@"
+                            },
+                            "start_location": {
+                                "lat": 4.6719566,
+                                "lng": -74.0659611
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 km",
+                                "value": 137
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 28
+                            },
+                            "end_location": {
+                                "lat": 4.6706024,
+                                "lng": -74.0664218
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Cra. 28a</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "_lo[~|`cMz@v@|@v@|@r@"
+                            },
+                            "start_location": {
+                                "lat": 4.671520699999999,
+                                "lng": -74.0656018
+                            },
+                            "travel_mode": "DRIVING"
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                }
+            ],
+            "overview_polyline": {
+                "points": "q_o[hbbcMaF}DoAaAsB_B]]Zk@xAeCvAgChAsBMIgAy@}AkAOSa@_@uAgABKBOCKf@c@l@e@z@v@zBjB"
+            },
+            "summary": "Av. Cdad. de Quito/Ave Cra 30/Av NQS and Cl. 78",
+            "warnings": [],
+            "waypoint_order": []
+        }
+    ],
+    "route_4": [
+        {
+            "bounds": {
+                "northeast": {
+                    "lat": 4.6752443,
+                    "lng": -74.05952090000001
+                },
+                "southwest": {
+                    "lat": 4.6673684,
+                    "lng": -74.0669229
+                }
+            },
+            "copyrights": "Map data \u00a92024",
+            "legs": [
+                {
+                    "distance": {
+                        "text": "2.0 km",
+                        "value": 1983
+                    },
+                    "duration": {
+                        "text": "7 mins",
+                        "value": 438
+                    },
+                    "end_address": "Cra. 28a #78 - 50, polo, Bogot\u00e1, Colombia",
+                    "end_location": {
+                        "lat": 4.6706024,
+                        "lng": -74.0664218
+                    },
+                    "start_address": "Autopista Nte. #87 17, Bogot\u00e1, Colombia",
+                    "start_location": {
+                        "lat": 4.6752443,
+                        "lng": -74.05952090000001
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "0.3 km",
+                                "value": 254
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 25
+                            },
+                            "end_location": {
+                                "lat": 4.6729879,
+                                "lng": -74.05990430000001
+                            },
+                            "html_instructions": "Head <b>south</b> on <b>Ak. 20</b>/<wbr/><b>Autopista Nte.</b> toward <b>Cl. 87</b>",
+                            "polyline": {
+                                "points": "gcp[~v_cMp@Fh@F^DTBlAJfCVt@Fb@D"
+                            },
+                            "start_location": {
+                                "lat": 4.6752443,
+                                "lng": -74.05952090000001
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.3 km",
+                                "value": 324
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 86
+                            },
+                            "end_location": {
+                                "lat": 4.6734434,
+                                "lng": -74.062793
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Cl. 85a</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "euo[jy_cMGp@O~AUfC?HAB?DAFKjACd@I~@KfAAP"
+                            },
+                            "start_location": {
+                                "lat": 4.6729879,
+                                "lng": -74.05990430000001
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 km",
+                                "value": 138
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 37
+                            },
+                            "end_location": {
+                                "lat": 4.672344,
+                                "lng": -74.0630852
+                            },
+                            "html_instructions": "Turn <b>left</b> onto <b>Cra. 24</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "_xo[lk`cMCTr@F|@Hr@Hx@H"
+                            },
+                            "start_location": {
+                                "lat": 4.6734434,
+                                "lng": -74.062793
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 km",
+                                "value": 139
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 24
+                            },
+                            "end_location": {
+                                "lat": 4.671103,
+                                "lng": -74.0632469
+                            },
+                            "html_instructions": "Continue straight onto <b>Ak. 24</b>/<wbr/><b>Cra. 24</b>",
+                            "maneuver": "straight",
+                            "polyline": {
+                                "points": "cqo[hm`cM^B^BdAHRBn@Bl@D"
+                            },
+                            "start_location": {
+                                "lat": 4.672344,
+                                "lng": -74.0630852
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.4 km",
+                                "value": 446
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 85
+                            },
+                            "end_location": {
+                                "lat": 4.6673684,
+                                "lng": -74.0644066
+                            },
+                            "html_instructions": "Keep <b>left</b> to continue on <b>Cra. 24</b>",
+                            "maneuver": "keep-left",
+                            "polyline": {
+                                "points": "kio[hn`cMLAnCJx@Dr@Dt@DL@d@BJ?J@V@TJl@TTHTJ`Ah@pC~A"
+                            },
+                            "start_location": {
+                                "lat": 4.671103,
+                                "lng": -74.0632469
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.3 km",
+                                "value": 333
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 73
+                            },
+                            "end_location": {
+                                "lat": 4.6689983,
+                                "lng": -74.0669229
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Cl. 77</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "arn[pu`cMGHU^y@`BOVq@jAm@dAQ\\_@r@a@p@i@z@"
+                            },
+                            "start_location": {
+                                "lat": 4.6673684,
+                                "lng": -74.0644066
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 km",
+                                "value": 227
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 62
+                            },
+                            "end_location": {
+                                "lat": 4.6705353,
+                                "lng": -74.0655792
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Cra. 28</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "g|n[feacM}@w@_Aw@yAmA{AmA"
+                            },
+                            "start_location": {
+                                "lat": 4.6689983,
+                                "lng": -74.0669229
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "77 m",
+                                "value": 77
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 25
+                            },
+                            "end_location": {
+                                "lat": 4.670910399999999,
+                                "lng": -74.06615819999999
+                            },
+                            "html_instructions": "Turn <b>left</b> at the 2nd cross street onto <b>Cl. 79</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "{eo[z|`cMc@x@e@x@"
+                            },
+                            "start_location": {
+                                "lat": 4.6705353,
+                                "lng": -74.0655792
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "45 m",
+                                "value": 45
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 21
+                            },
+                            "end_location": {
+                                "lat": 4.6706024,
+                                "lng": -74.0664218
+                            },
+                            "html_instructions": "Turn <b>left</b> onto <b>Cra. 28a</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "eho[n`acM|@r@"
+                            },
+                            "start_location": {
+                                "lat": 4.670910399999999,
+                                "lng": -74.06615819999999
+                            },
+                            "travel_mode": "DRIVING"
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                }
+            ],
+            "overview_polyline": {
+                "points": "gcp[~v_cM`MjA}@`K[~DCTr@FpBR~DZbAFz@BhEPhBJjAFV@TJbA^vAt@pC~AGHoA`CaAbBaChEi@z@}@w@yCeC{AmAc@x@e@x@|@r@"
+            },
+            "summary": "Ak. 24",
+            "warnings": [],
+            "waypoint_order": []
+        }
+    ]
+}

@@ -1,0 +1,164 @@
+/* Estilo general */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Encabezado con título y logos */
+#header {
+    background-color: rgb(0, 0, 0);
+    /* Fondo negro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#header #title {
+    color: white;
+    /* Letras en blanco */
+    font-size: 24px;
+    /* Ajusta el tamaño de fuente según lo necesites */
+    font-weight: bold;
+    /* Letras en negrita */
+}
+
+/*#title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}*/
+
+#logos {
+    display: flex;
+    gap: 10px;
+}
+
+/*#logos img {
+    width: 50px;
+    height: auto;
+}*/
+
+#header #logos img {
+    width: 50px;
+    /* Ajusta el tamaño de los logos */
+    height: auto;
+    margin: 0 10px;
+    /* Espacio entre los logos */
+}
+
+/* Contenedor del mapa */
+#mapContainer {
+    flex: 1;
+    position: relative;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+/* Selector del vehículo */
+#vehicleSelector {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Timer */
+#timer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+    background-color: rgb(10, 224, 10);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ventana emergente para la pregunta */
+#questionModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para posicionar los controles táctiles */
+#controlsContainer {
+    visibility: visible;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#controlsContainer .row {
+    display: flex;
+    justify-content: center;
+}
+
+#controlsContainer button {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Posiciona el contenedor del botón de reiniciar en el lado derecho de la pantalla */
+#restartButtonContainer {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    /* Colocado a la derecha de la pantalla */
+    z-index: 10;
+}
+
+/* Estilos para el botón de reiniciar */
+#restartButton {
+    padding: 10px 20px;
+    background-color: #f44336;
+    /* Color rojo por defecto, puedes cambiarlo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#restartButton:hover {
+    background-color: #d32f2f;
+    /* Color más oscuro cuando se hace hover */
+}

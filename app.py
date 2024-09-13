@@ -51,6 +51,5 @@ def serve_questions():
 
 if __name__ == '__main__':
     # Especifica las rutas del certificado y la clave generados por mkcert
-    app.run(ssl_context=('localhost.pem', 'localhost-key.pem'), debug=True)
-
+    app.run(host='0.0.0.0', port=5000, ssl_context=('localhost.pem', 'localhost-key.pem'), debug=True)
 

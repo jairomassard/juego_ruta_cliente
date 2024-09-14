@@ -73,11 +73,11 @@
             "correct": 0
         },
         {
-            "question": "¿Cuál es la submarca de Audi enfocada en vehículos eléctricos disponible en Colombia?",
+            "question": "¿Cuál es el modelo eléctrico de Audi vendido actualmente en Colombia?",
             "options": [
-                "e-tron",
-                "i-series",
-                "PowerDrive"
+                "Audi Q8 e-tron",
+                "Audi e-tron",
+                "Audi Q3"
             ],
             "correct": 0
         },
@@ -111,7 +111,7 @@
         {
             "question": "¿Qué modelo de Audi está enfocado en el público joven colombiano, gracias a su diseño compacto y versátil?",
             "options": [
-                "Audi A1",
+                "Audi A3",
                 "Audi Q3",
                 "Audi A6"
             ],
@@ -148,7 +148,7 @@
             "question": "¿Cómo se llama el SUV más grande de Volkswagen disponible en Colombia?",
             "options": [
                 "Tiguan",
-                "Touareg",
+                "Teramont",
                 "Atlas"
             ],
             "correct": 1
@@ -156,7 +156,7 @@
         {
             "question": "¿Qué significa la palabra 'Volkswagen'?",
             "options": [
-                "Coche popular",
+                "Coche del pueblo",
                 "Coche de lujo",
                 "Coche de ciudad"
             ],
@@ -181,13 +181,13 @@
             "correct": 2
         },
         {
-            "question": "¿Cuál es el sedán más vendido de Volkswagen en Colombia?",
+            "question": "¿Cuál es el modelo más vendido de Volkswagen en Colombia en los ultimos años?",
             "options": [
-                "Passat",
-                "Jetta",
-                "Arteon"
+                "Gol",
+                "T-Cross",
+                "Nivus"
             ],
-            "correct": 1
+            "correct": 0
         },
         {
             "question": "¿Qué motor revolucionario lanzó Volkswagen, disponible en modelos colombianos, en la década de los 70?",
@@ -242,15 +242,6 @@
                 "Polo"
             ],
             "correct": 1
-        },
-        {
-            "question": "¿Qué modelo eléctrico lanzó Volkswagen en Colombia dentro de su nueva gama ID?",
-            "options": [
-                "ID.3",
-                "e-Golf",
-                "Passat GTE"
-            ],
-            "correct": 0
         },
         {
             "question": "¿Cuál es el auto más vendido de la historia de Volkswagen, también popular en Colombia?",
